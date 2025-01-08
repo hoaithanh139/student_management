@@ -1,0 +1,38 @@
+<!-- resources/templates/edit.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Chỉnh Sửa File</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="/js/script.js"></script>
+</head>
+<body>
+<!-- Include header -->
+<div th:replace="~{fragments/header :: header}"></div>
+<div class="sidebar">
+    <h1 class="text-center mb-4">Chỉnh Sửa File</h1>
+    <form th:action="@{/edit/{id}(id=${file.id})}" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="fileName" class="form-label">Tên File:</label>
+            <input type="text" class="form-control" readonly id="fileName" name="fileName" th:value="${file.fileName}"
+                   required>
+        </div>
+        <div class="mb-3">
+            <label for="newFile" class="form-label">Chọn file mới (nếu có):</label>
+            <input type="file" class="form-control" id="newFile" name="newFile">
+        </div>
+        <div class="btn-container">
+            <button type="submit" class="btn btn-success">Cập nhật</button>
+            <a href="/" class="btn btn-secondary" onclick="return confirmPopup('Bạn có chắc muốn hủy thao tác này?');">Quay
+                lại</a>
+        </div>
+    </form>
+</div>
+<!-- Include footer -->
+<div th:replace="~{fragments/footer :: footer}"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script src="/static/js/script.js"></script>
+</html>

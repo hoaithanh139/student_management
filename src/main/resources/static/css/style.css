@@ -1,0 +1,272 @@
+/* resources/static/css/style.css */
+
+/* Định dạng chung cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Áp dụng cho toàn bộ trang */
+html, body {
+    height: 100%; /* Đảm bảo trang có chiều cao 100% */
+    margin: 0; /* Loại bỏ margin mặc định */
+    display: flex;
+    flex-direction: column; /* Đặt chiều của các phần tử theo cột */
+    justify-content: space-between;
+}
+
+/* Nội dung chính của trang */
+main {
+    flex: 1; /* Chiếm phần còn lại của chiều cao */
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+}
+
+/* Định dạng cho sidebar */
+.sidebar {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Cải thiện layout cho trang */
+.container {
+    display: flex;
+}
+
+.col-3 {
+    padding-right: 30px;
+}
+
+.col-9 {
+    padding-left: 30px;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Card style */
+.card {
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #6c757d;
+    color: white;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+/* Định dạng cho nút bấm */
+.btn {
+    border-radius: 5px;
+}
+/* Định dạng chung cho header */
+header {
+    background-color: #343a40;  /* Màu nền tối cho header */
+    padding: 15px 0;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo style */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffcc00;  /* Màu vàng cho logo */
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+/* Logo hover effect */
+.logo:hover {
+    color: #ffc107;  /* Màu vàng sáng hơn khi hover */
+}
+
+/* Menu container */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* Cải thiện kiểu dáng cho các liên kết trong menu */
+.menu-link {
+    text-decoration: none;
+    color: #f8f9fa;  /* Màu chữ sáng */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hiệu ứng hover cho các liên kết */
+.menu-link:hover {
+    background-color: #007bff;  /* Màu nền khi hover */
+    color: white;
+}
+
+/* Menu links */
+.menu a {
+    text-decoration: none;
+    color: #f8f9fa;  /* Màu chữ sáng */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for menu links */
+.menu a:hover {
+    background-color: #007bff;  /* Màu nền khi hover */
+    color: white;
+}
+
+/* Adjust button styling */
+.btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: end;
+    column-gap: 10px
+}
+
+/* Responsive design: Chỉnh lại header cho các màn hình nhỏ */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu a {
+        padding: 10px 15px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+    }
+}
+
+/* Tùy chỉnh footer */
+footer {
+    background-color: #343a40;
+    color: white;
+}
+
+footer .list-inline-item a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+footer .list-inline-item a:hover {
+    color: #f8f9fa;
+}
+
+footer .bi {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer .bi:hover {
+    color: #17a2b8;
+}
+
+/* resources/static/css/style.css */
+/* Đã có CSS cơ bản cho body, footer, header, sidebar, v.v. */
+.cart-summary {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cart-summary h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.cart-summary .btn {
+    font-size: 16px;
+}
+
+/* Cải thiện style cho bảng giỏ hàng */
+.table {
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.quantity-input {
+    width: 150px;
+    text-align: center;
+}
+
+/* Nút "Xóa" */
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
